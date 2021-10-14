@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="icon" href="images/potrait.jpg">
-        <title>Nguyen Ngoc Phuc- Curriculum Vitae</title>
+        <title>Nguyen Ngoc Phuc- Portfolio</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,6 +15,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.js"
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/csss.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="js/js.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,7 +26,7 @@
    <div id="load">
         <img src="./images/Spinner-1s-200px.gif" alt="loading gif">
     </div> -->
-        <div class="nav-menu" id="nav">
+        <!-- <div class="nav-menu" id="nav">
             <ul class="nav-menu-left">
                 <li><a href="#top"><i class="fas fa-home"></i>Home</a></li>
                 <li><a href="#about"><i class="fas fa-user"></i>About</a></li>
@@ -36,57 +37,65 @@
                 <li><a href="#quotes"><i class="fas fa-quote-right"></i>Quotes</a></li>
                 <li><a href="#contact"><i class="fas fa-comment"></i>Contact</a></li>
             </ul>
-        </div>
-        <div id="head-container" id="top">
-            <div class="cover-photo">
-                <div>
-                    <img class="potrait" src="images/potrait.jpg" id="potrait">
-                </div>
-            </div>
+        </div> -->
 
-            <div>
-                <div class="head-name" id="about">
-                    <h1>Nguyen Ngoc Phuc</h1>
-                    <h2>Front-end developer</h2>
-                </div>
+        <!-------------------------------------------------------------------------->
+        <header class="header" id="top">
+            <div class="header__intro">
+                <h2 class="header__intro--title wow fadeInDown">Hello, I'm</h2>
+                <h1 class="header__intro--heading">Nguyen Ngoc Phuc</h1>
+                <h2>Front-end developer</h2>
+                <a href="#about" class="header__intro--arrow arrow__down"><i class="fas fa-arrow-down"></i></a>
             </div>
-        </div>
-        <div class="body-container">
-            <div class="about">
-                <div class="introduce">
-                    <h3>Who am I?</h3>
-                    <div>I am a web developer, expert in front-end development.
+        </header>
+        <div class="body">
+            <div class="about" id="about">
+                <div class="about__photo">
+                        <img src="images/potrait.jpg" id="potrait">
+                </div>
+                <div class="about__intro">
+                    <h2 class="about__heading">Who am I?</h2>
+                    <p class="about__desc">I am a web developer, expert in front-end development.
                         I am learning Infomation Technology in Ho Chi Minh Open University.
                         I found myself especially interested into web development and I have
                         studied more about it. Nowadays, I spend most of my time in researching
                         web development skills and technologies with a high passion to create
                         wonderful websites for everyone around the world.
-                    </div>
+                    </p>
+                    <a href="#resume" class="about__arrow arrow__down"><i class="fas fa-arrow-down"></i></a>
                 </div>
-                <div class="personal-info">
-                    <h3>Personal Info</h3>
-                    <div><i class="fas fa-birthday-cake"></i>03/10/2001</div>
-                    <div><i class="fas fa-phone"></i>0359452734</div>
-                    <div><i class="fas fa-envelope"></i>ngocphuc.nguyen256@gmail.com</div>
-                    <div><i class="fas fa-map-marked-alt"></i>146 Trần Bá Giao street, ward 5, Gò Vấp district, Ho Chi
-                        Minh City</div>
-                    <div>
-                        <a href="mailto:ngocphuc.nguyen256@gmail.com">
-                            <i class="fas fa-envelope"></i></a>
-                        <a href="https://github.com/ngocphucnguyen256"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="expert">
-                    <h3>My Expertise</h3>
-                    <div><i class="fab fa-chrome"></i>Web development</div>
-                    <div><i class="fab fa-react"></i>Web app</div>
-                    <div><i class="fas fa-desktop"></i>Web Design</div>
-                </div>
+              
             </div>
             <!----------------------------------------Resume----------------------------------------->
 
             <div class="resume" id="resume">
-                <h3>My Resume</h3>
+                <h2 class="resume__heading">My Resume</h2>
+                <div class="resume__personal">
+                    <h3 class="resume__personal--heading">Personal Info</h3>
+                    <div><i class="fas fa-phone"></i>0359452734</div>
+                    <div><a href="mailto:ngocphuc.nguyen256@gmail.com">
+                        <i class="fas fa-envelope"></i>ngocphuc.nguyen256@gmail.com</a>
+                    </div>
+                    <div><a href="https://github.com/ngocphucnguyen256"><i class="fab fa-github"></i>github.com/ngocphucnguyen256</a></div>
+                    
+                </div>
+                <div class="resume__expert">
+                    <h3>Expertise</h3>
+                    <div class="resume__expert--list">
+                        <div class="bg__yellow">
+                            <i class="fab fa-chrome"></i>
+                            <p>Web development</p>
+                        </div>
+                        <div class="bg__blue">
+                            <i class="fab fa-react"></i>
+                            <p>Web application</p>
+                        </div>
+                        <div class="bg__violet">
+                            <i class="fas fa-desktop"></i>
+                            <p>Web Design</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="resume-container">
                     <div class="resume-first-block">
                         <div class="resume__card">
