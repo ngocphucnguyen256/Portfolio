@@ -155,9 +155,18 @@ i {
 /*----------------------------header------------------------------------*/
 .header {
   height: 100vh;
-  background-color: #202325;
   padding-top: 20vh;
   position: relative;
+}
+
+.header__canvas {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
 }
 
 .header__intro {
@@ -185,12 +194,13 @@ i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: black;
+  color: white;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10rem 5rem;
-  background-color: white;
+  background: url(../images/wave.svg);
+  background-size: cover;
 }
 
 .about > div {
@@ -227,7 +237,6 @@ i {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  color: black;
 }
 
 /* -----------------------resume-------------------------*/
@@ -297,29 +306,38 @@ i {
   margin-top: 4rem;
 }
 
-.resume-first-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.resume__icon--big {
+  font-size: 6rem;
 }
 
-.resume-first-block > div {
-  width: 50%;
-  margin: 4rem;
-  height: 55rem;
-  background-color: #202325;
-  border-radius: 4rem;
-  padding: 3rem;
-}
-
-.resume__card > h4 {
-  margin-bottom: 1rem;
+.resume__info--heading {
   margin-top: 2rem;
 }
 
-.resume__card > ul > li {
-  margin-bottom: 1rem;
-  margin-left: 1rem;
+.resume__info--list {
+  margin-top: 2rem;
+}
+
+.resume__info--list > li {
+  margin-bottom: 1.5rem;
+}
+
+.resume__education {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.resume__education > i {
+  margin-bottom: 2rem;
+}
+
+.resume__skill--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .resume-second-block {

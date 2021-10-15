@@ -1,4 +1,9 @@
 $(window).on("load", function(){
+    Particles.init({
+        selector: '.header__canvas',
+        color: '#085875',
+        connectParticles: true,
+      });
 //   $('#load').delay(1000).fadeOut('slow', function(){
 //       $('body').delay(1000).removeClass('preloading');
 //   });

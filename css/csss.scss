@@ -1,6 +1,7 @@
-$bg-color: rgb(32, 35, 37);;
+$bg-color: rgb(32, 35, 37);
 $font :'Poppins', sans-serif;
 $shadow: 8px 10px 22px -1px rgba(0,0,0,0.77);
+$color-primary: white;
 
 
 *{
@@ -135,10 +136,18 @@ i{
 /*----------------------------header------------------------------------*/
 .header{
     height: 100vh;
-    background-color: $bg-color;
+    // background-color: $bg-color;
     padding-top: 20vh;
     position: relative;
-
+    &__canvas{
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left: 0;
+        display:block;
+    }
     &__intro{
         text-align: center;
         &--title{
@@ -158,10 +167,11 @@ i{
 /*----------------------------about------------------------------------*/
 .about{
     display: flex;
-    color: black;
+    color: white;
     justify-content: space-between;
     padding: 10rem 5rem;
-    background-color:white;
+    background: url(../images/wave.svg);
+    background-size: cover;
     &>div{
         width: 45%;
     }
@@ -189,7 +199,6 @@ i{
         bottom: 30%;
         left: 50%;
         transform: translateX(-50%);
-        color:black;
     }
 }
 
@@ -239,27 +248,38 @@ i{
             }
         }
     }
-}
-.resume-first-block{
-    display: flex;
-}
-.resume-first-block>div{
-    width:50%;
-    margin:4rem;
-    height: 55rem;
-    background-color: rgb(32, 35, 37);
-    border-radius:4rem;
-    padding:3rem;
-}
-
-.resume__card{
-    >h4{
-        margin-bottom: 1rem;
-        margin-top: 2rem;
+    &__icon{
+        &--big{
+            font-size:6rem;
+        }
     }
-    >ul>li{
-        margin-bottom: 1rem;
-        margin-left: 1rem;
+    &__info{
+        &--heading{
+            margin-top: 2rem;
+        }
+        &--list{
+        margin-top: 2rem ;
+        >li{
+            margin-bottom: 1.5rem;
+        }
+        }
+    }
+    &__education{
+        text-align: center;
+        margin-bottom: 5rem;
+        >i{
+            margin-bottom: 2rem;
+        }
+    }
+    &__skill{
+
+        &--list{
+            display: flex;
+            justify-content:space-evenly;
+        }
+        &--item{
+  
+        }
     }
 }
 
