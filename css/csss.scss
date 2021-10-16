@@ -207,7 +207,7 @@ i{
 
 /* -----------------------resume-------------------------*/
 .resume{
-    padding: 10rem 4rem;
+    padding: 5rem 4rem;
     &__heading{
         text-align: center;
         margin-bottom: 10rem;
@@ -224,12 +224,11 @@ i{
     }
     &__expert{
         text-align: center;
-        margin-bottom: 5rem;
         &--list{
             margin-top: 5rem;
             display: flex;
-    
             justify-content: space-between;
+            margin-bottom: 2rem;
             >div{
                 width:32%;
                 height: 20vh;
@@ -247,18 +246,20 @@ i{
                 }
             }
         }
+  
     }
     &__icon{
         &--big{
             font-size:6rem;
+            margin-bottom: 2rem;
         }
     }
     &__info{
         &--heading{
             margin-top: 2rem;
+            margin-bottom: 2rem;
         }
         &--list{
-        margin-top: 2rem ;
         >li{
             margin-bottom: 1.5rem;
         }
@@ -267,18 +268,19 @@ i{
     &__education{
         text-align: center;
         margin-bottom: 5rem;
-        >i{
-            margin-bottom: 2rem;
-        }
+        padding-top: 5rem;
     }
     &__skill{
-
+        text-align: center;
         &--list{
             display: flex;
             justify-content:space-evenly;
+            >li{
+
+            }
         }
         &--item{
-  
+            
         }
     }
 }

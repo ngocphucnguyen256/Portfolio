@@ -241,7 +241,7 @@ i {
 
 /* -----------------------resume-------------------------*/
 .resume {
-  padding: 10rem 4rem;
+  padding: 5rem 4rem;
 }
 
 .resume__heading {
@@ -264,7 +264,6 @@ i {
 
 .resume__expert {
   text-align: center;
-  margin-bottom: 5rem;
 }
 
 .resume__expert--list {
@@ -275,6 +274,7 @@ i {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .resume__expert--list > div {
@@ -308,14 +308,12 @@ i {
 
 .resume__icon--big {
   font-size: 6rem;
+  margin-bottom: 2rem;
 }
 
 .resume__info--heading {
   margin-top: 2rem;
-}
-
-.resume__info--list {
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .resume__info--list > li {
@@ -325,10 +323,11 @@ i {
 .resume__education {
   text-align: center;
   margin-bottom: 5rem;
+  padding-top: 5rem;
 }
 
-.resume__education > i {
-  margin-bottom: 2rem;
+.resume__skill {
+  text-align: center;
 }
 
 .resume__skill--list {
