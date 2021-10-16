@@ -212,6 +212,7 @@ i{
 /* -----------------------resume-------------------------*/
 .resume{
     padding: 5rem 4rem;
+    position: relative;
     &__heading{
         text-align: center;
         margin-bottom: 10rem;
@@ -279,13 +280,15 @@ i{
         &--list{
             display: flex;
             justify-content:space-evenly;
-            >li{
+    
+        }
 
-            }
-        }
-        &--item{
-            
-        }
+    }
+    &__to--project{
+        position: absolute;
+        bottom: -1%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -353,8 +356,16 @@ h4{
     background: url(../images/fixed-backound.jpg);
     background-attachment: fixed;
     background-size: contain;
+    padding: 5rem 0rem;
+
+    &__heading{
+        text-align: center;
+    }
     &__container{
         padding: 3rem;
+    }
+    &__website{
+        position: relative;
     }
    &__section--wrapper{
         display: flex;
@@ -408,7 +419,14 @@ h4{
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
     }
-   
+    &__to{
+        &--app{
+            position: absolute;
+            bottom: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
 }
 .animation__backInRight{
     animation: backInRight;

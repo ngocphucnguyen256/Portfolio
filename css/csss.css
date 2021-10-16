@@ -246,6 +246,7 @@ i {
 /* -----------------------resume-------------------------*/
 .resume {
   padding: 5rem 4rem;
+  position: relative;
 }
 
 .resume__heading {
@@ -343,6 +344,14 @@ i {
           justify-content: space-evenly;
 }
 
+.resume__to--project {
+  position: absolute;
+  bottom: -1%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .resume-second-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -422,10 +431,19 @@ h4 {
   background: url(../images/fixed-backound.jpg);
   background-attachment: fixed;
   background-size: contain;
+  padding: 5rem 0rem;
+}
+
+.project__heading {
+  text-align: center;
 }
 
 .project__container {
   padding: 3rem;
+}
+
+.project__website {
+  position: relative;
 }
 
 .project__section--wrapper {
@@ -496,6 +514,14 @@ h4 {
   background-size: 400% 400%;
   -webkit-animation: gradient 15s ease infinite;
           animation: gradient 15s ease infinite;
+}
+
+.project__to--app {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .animation__backInRight {
