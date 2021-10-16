@@ -7,12 +7,12 @@ $(window).on("load", function(){
 //   $('#load').delay(1000).fadeOut('slow', function(){
 //       $('body').delay(1000).removeClass('preloading');
 //   });
-  
+
 })
 window.onload=function() {
   
     var slideIndex =0;
-    slideShow();
+    // slideShow();
     navHightLight();
 
 
@@ -44,8 +44,13 @@ window.onload=function() {
 
 
     function slideShow() {
-        var slideList=document.getElementsByClassName("slide");
-        var thumbnailList=document.getElementsByClassName("thumbnail-image");
+        const slider = document.querySelector(".slider")
+        const sliderMain = document.querySelector(".slider__main")
+        const sliderItems=document.querySelectorAll("slider__item")
+        const leftButton= document.querySelector(".slider__button--left")
+        const rightButton= document.querySelector(".slider__button--right")
+
+    
         if(slideIndex>=slideList.length){
             slideIndex =0
         }

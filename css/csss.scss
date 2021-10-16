@@ -38,6 +38,10 @@ img{
  h4{
      font-size:2.5rem
  }
+ 
+h5{
+    font-size:2rem;
+}
 .bg__yellow{background-color: rgb(117, 112, 66);}
 .bg__blue{background-color: #085875;}
 .bg__violet{background-color: indigo;}
@@ -412,72 +416,68 @@ h4{
 }
 
 
-h5{
-    color:rgb(178, 18, 218);
-    font-size:2rem;
-}
 /* -----------------------Quotes-----------------------*/
 .quotes{
-    background-image: url(../images/background-3.jpg);
-    background-size: cover;
-}
-.slideshow-container{
-    width: 100rem;
-    height:70rem;
-    margin-left: auto;
-    margin-right:auto;
     text-align: center;
+    padding: 5rem 20rem;
+    &__heading{
+        margin-bottom: 4rem;
+    }
 }
-.slide{
-    opacity: 0;
-    display:none;
-    transition: 0.5s;
+
+.slider{
+    display: flex;
+    justify-content:center;
+    align-items: center;
     position: relative;
-}
-.show-slide{
-    opacity: 1;
-    display:block;
- 
+    &__button{
+        display: block;
+        position: absolute;
+        font-size: 4rem;
+        top: 47%;
+        color: black;
+        z-index: 10;
+        &:hover{
+            transform: scale(1.2);
+            transition: transform 1.5s ease-in-out;
+        }
+        &--left{
+            left: 1rem;
+        }
+        &--right{
+            right: 1rem;
+        }
+    }
+    &__main{
+        position: relative;
+        width: 100%;
+        border-radius: 3rem;
+        height:60rem;
+        overflow: hidden;
+        display:flex;
+    }
+    &__item{
+        flex: 1 0 100%;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        &--text{
+            background-color: rgba(31, 13, 13, 0.39);
+            position: absolute;
+            padding: 2rem;
+            left: 0rem;
+            bottom: 0rem;
+            z-index: 10;
+        }
+        &--quotes{
+            margin-bottom: 2rem;
+        }
 
+    }
 }
-.show-thumbnail{
-    border: 3px solid rgba(62, 62, 206, 0.486);
-}
-.thumbnail{
-    width: 100%;
-    margin-left: auto;
-    margin-right:auto;
 
-}
-.thumbnail-image{
-    width:10rem;
-    height:10rem;
-    border-radius:50%;
-    margin:1rem;
- 
-}
-.slide>img{
-    width: 100%;
-    height: 55rem;
-}
-.quotes-line{
-    position:absolute;
-    bottom: 0%;
-    width: 100%;
-    text-align:center;
-    padding-top:1.2rem;
-    padding-bottom:1.2rem;
-    background-color:rgb(26, 30, 37);
 
-}
-.quotes-line>div{
-    max-height: 7.5rem;
 
-}
-.quotes-author{
-    text-transform: uppercase;
-    padding-top:1.2rem;
-}
 /* -----------------------Contact-----------------------*/
 .contact{
     padding-top: 2rem;
