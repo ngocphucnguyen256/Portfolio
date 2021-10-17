@@ -10,8 +10,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
             integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.css"  />
         <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <link rel="stylesheet" href="css/csss.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
@@ -39,17 +39,17 @@
             <canvas class="header__canvas"></canvas>
             <div class="header__intro">
                 <h2 class="header__intro--title wow fadeInDown">Hello, I'm</h2>
-                <h1 class="header__intro--heading">Nguyen Ngoc Phuc</h1>
-                <h2>Front-end developer</h2>
+                <h1 class="header__intro--heading wow fadeInRight">Nguyen Ngoc Phuc</h1>
+                <h2 class=" wow fadeInLeft">Front-end developer</h2>
                 <a href="#about" class="header__intro--arrow arrow__down"><i class="fas fa-arrow-down"></i></a>
             </div>
         </header>
         <div class="body">
             <div class="about" id="about">
-                <div class="about__photo">
+                <div class="about__photo wow slideInRight">
                         <img src="images/potrait.jpg" id="potrait">
                 </div>
-                <div class="about__intro">
+                <div class="about__intro wow slideInRight">
                     <h2 class="about__heading">Who am I?</h2>
                     <p class="about__desc">I am a web developer, expert in front-end development.
                         I am learning Infomation Technology in Ho Chi Minh Open University.
@@ -65,8 +65,8 @@
             <!----------------------------------------Resume----------------------------------------->
 
             <div class="resume" id="resume">
-                <h2 class="resume__heading">My Resume</h2>
-                <div class="resume__personal">
+                <h2 class="resume__heading wow fadeInDown">My Resume</h2>
+                <div class="resume__personal wow flipInX">
                     <h3 class="resume__personal--heading">Personal Info</h3>
                     <div><i class="fas fa-phone"></i>0359452734</div>
                     <div><a href="mailto:ngocphuc.nguyen256@gmail.com">
@@ -76,24 +76,24 @@
                     
                 </div>
                 <div class="resume__expert">
-                    <h3>Expertise</h3>
+                    <h3 class="wow fadeInDown">Expertise</h3>
                     <div class="resume__expert--list">
-                        <div class="bg__yellow">
+                        <div class="bg__yellow wow slideInLeft">
                             <i class="fab fa-chrome"></i>
                             <p>Web development</p>
                         </div>
-                        <div class="bg__blue">
+                        <div class="bg__blue wow slideInDown">
                             <i class="fab fa-react"></i>
                             <p>Web application</p>
                         </div>
-                        <div class="bg__violet">
+                        <div class="bg__violet wow slideInRight">
                             <i class="fas fa-desktop"></i>
                             <p>Web Design</p>
                         </div>
                     </div>
                     <a href="#resume__education" class="resume__expert--arrow arrow__down"><i class="fas fa-arrow-down"></i></a>
                 </div>
-                <div class="resume__education" id="resume__education">
+                <div class="resume__education wow fadeInDown" id="resume__education">
                             <i class="fab fa-leanpub resume__icon--big"></i>
                             <h3>Education</h3>
                             <h4 class="resume__info--heading">Information Technology (IT)</h4>
@@ -112,9 +112,9 @@
 
                 </div>
                 <div class="resume__skill">
-                    <i class="fas fa-brain resume__icon--big"></i>
-                    <h3>Skills</h3>
-                        <div class="resume__skill--item">
+                    <i class="fas fa-brain resume__icon--big wow fadeInDown"></i>
+                    <h3 class="wow fadeInDown">Skills</h3>
+                        <div class="resume__skill--item wow slideInUp">
                             <h4  class="resume__info--heading">Development skills</h4>
                             <ul class="resume__skill--list">
                                 <li><i class="fab fa-html5"></i>HTML</li>
@@ -133,7 +133,7 @@
                    </div>
                    <a href="#project" class="resume__to--project arrow__down"><i class="fas fa-arrow-down"></i></a>
                     </div>
-                    <div class="resume-second-block">
+                    <div class="resume-second-block wow bounceInUp">
                         <div class="assets">
                             <h3>Assets</h3>
                             <ul class="assets__list">
@@ -164,12 +164,12 @@
             </div>
             <!--------------------------------------Projects------------------------------------------->
             <div class="project" id="project">
-                <h3 class="project__heading">Projects</h3>
+                <h3 class="project__heading wow fadeInDown">Projects</h3>
                 <div class="project__container">
                     <div class="project-website project__website">
-                        <h4><i class="fas fa-desktop"></i>Website</h4>
+                        <h4><i class="fas fa-desktop wow bounceInLeft"></i>Website</h4>
                         <div class="project__section--wrapper">
-                            <div class="project__item">
+                            <div class="project__item wow bounceInLeft">
                                 <a href="http://sleeptimer.tk/" target="_blank">
                                     <h5 class="project__item--title">Sleep Timer <i
                                             class="fas fa-external-link-square-alt"></i></h5>
@@ -191,7 +191,7 @@
                                 </div>
                             </div>
                          
-                            <div class="project__item">
+                            <div class="project__item wow bounceInRight">
                                 <a href="https://ngocphucnguyen256.github.io/Design-Dev/" target="_blank">
                                     <h5 class="project__item--title">The kids playground <i
                                             class="fas fa-external-link-square-alt"></i></h5>
@@ -213,7 +213,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="project__item">
+                            <div class="project__item wow bounceInLeft">
                                 <a href="https://ngocphucnguyen256.github.io/Wigs/" target="_blank">
                                     <h5 class="project__item--title">Wigs <i
                                             class="fas fa-external-link-square-alt"></i></h5>
@@ -237,7 +237,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="project__item" >
+                            <div class="project__item wow bounceInRight" >
                                 <a href="https://ngocphucnguyen256.github.io/TheNightTreasure/" target="_blank">
                                     <h5 class="project__item--title">The night treasure <i
                                             class="fas fa-external-link-square-alt"></i></h5>
@@ -260,7 +260,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="project__item">
+                            <div class="project__item wow bounceInUp">
                                 <a href="https://ngocphucnguyen256.github.io/Crappo/" target="_blank">
                                     <h5 class="project__item--title">Crappo<i
                                             class="fas fa-external-link-square-alt"></i></h5>
@@ -286,9 +286,9 @@
                         <a href="#project__app" class="project__to--app arrow__down"><i class="fas fa-arrow-down"></i></a>
                     </div>
                     <div class="project-web-app" id="project__app">
-                        <h4><i class="fab fa-react"></i>Web application</h4>
+                        <h4 class="wow fadeInDown"><i class="fab fa-react"></i>Web application</h4>
                         <div class="project__section--wrapper">
-                            <div class="project__item">
+                            <div class="project__item wow bounceInLeft">
                                 <a href="https://ngocphucnguyen256.github.io/Calculator/" target="_blank">
                                     <h5 class="project__item--title">Calculator App <i
                                             class="fas fa-external-link-square-alt"></i></h5>
@@ -312,7 +312,7 @@
                             </div>
 
 
-                            <div class="project__item">
+                            <div class="project__item wow bounceInRight">
                                 <a href="https://ngocphucnguyen256.github.io/Music-App/" target="_blank">
                                     <h5 class="project__item--title">Music App <i
                                             class="fas fa-external-link-square-alt"></i></h5>
@@ -335,7 +335,7 @@
                                 </div>
                             </div>
                             
-                            <div class="project__item">
+                            <div class="project__item wow bounceInLeft">
                                 <a href="https://ngocphucnguyen256.github.io/minesweeper/" target="_blank">
                                     <h5 class="project__item--title">Minesweeper Game <i
                                             class="fas fa-external-link-square-alt"></i></h5>
@@ -358,7 +358,7 @@
                                 </div>
                             </div>
                             
-                            <div class="project__item">
+                            <div class="project__item wow bounceInRight">
                                 <a href="https://ngocphucnguyen256.github.io/nasa-photo-app/" target="_blank">
                                     <h5 class="project__item--title">Nasa Photo App <i
                                             class="fas fa-external-link-square-alt"></i></h5>
@@ -384,7 +384,7 @@
                                 </div>
                             </div>
                                                
-                            <div class="project__item">
+                            <div class="project__item wow bounceInLeft">
                                 <a href="https://to-do-list-mern-app.netlify.app/" target="_blank">
                                     <h5 class="project__item--title">To do list app <i
                                             class="fas fa-external-link-square-alt"></i></h5>
@@ -414,7 +414,7 @@
                                 </div>
                             </div>
                                                                            
-                            <div class="project__item">
+                            <div class="project__item wow bounceInRight">
                                 <a href="https://movies-app-256.netlify.app/" target="_blank">
                                     <h5 class="project__item--title">Movies app <i
                                             class="fas fa-external-link-square-alt"></i></h5>
@@ -438,7 +438,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="project__item">
+                            <div class="project__item wow bounceInUp">
                                 <a href="https://ngocphucnguyen256.github.io/Front-end-test/" target="_blank">
                                     <h5 class="project__item--title">What happened!<i
                                             class="fas fa-external-link-square-alt"></i></h5>
@@ -466,7 +466,7 @@
             </div>
             <!-------------------------------------Quotes-------------------------------------------------->
             <div class="quotes" id="quotes">
-                <h2 class="quotes__heading">My favorite quotes</h2>
+                <h2 class="quotes__heading wow fadeInDown">My favorite quotes</h2>
                 <div class="slider">
                     <i class="fas fa-chevron-left slider__button slider__button--left"></i>
                     <i class="fas fa-chevron-right slider__button slider__button--right"></i>
@@ -545,10 +545,9 @@
             <script src="https://code.jquery.com/jquery-3.6.0.js"
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-            <script src="js/js.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" integrity="sha512-jq8sZI0I9Og0nnZ+CfJRnUzNSDKxr/5Bvha5bn7AHzTnRyxUfpUArMzfH++mwE/hb2efOo1gCAgI+1RMzf8F7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+            
+            <script src="js/js.js"></script>
     </body>
 
     </html>

@@ -16,10 +16,12 @@ html{
     font-family: $font;
     font-size:62.5%;
     color:white;
+    
 }
 body{
     font-size: 2rem;
     background-color: $bg-color;
+
 }
 img{
     width: 100%;
@@ -45,6 +47,10 @@ h5{
 .bg__yellow{background-color: rgb(117, 112, 66);}
 .bg__blue{background-color: #085875;}
 .bg__violet{background-color: indigo;}
+
+.wow{
+    visibility: hidden;
+}
 
 .preloading{
     overflow:hidden;
@@ -154,6 +160,7 @@ i{
     }
     &__intro{
         text-align: center;
+        overflow: hidden;
         &--title{
             margin-bottom: 4rem;
         }
@@ -176,6 +183,7 @@ i{
     padding: 10rem 5rem;
     background: url(../images/wave.svg);
     background-size: cover;
+    overflow: hidden;
     &>div{
         width: 45%;
     }
@@ -213,6 +221,7 @@ i{
 .resume{
     padding: 5rem 4rem;
     position: relative;
+    overflow: hidden;
     &__heading{
         text-align: center;
         margin-bottom: 10rem;
@@ -357,7 +366,7 @@ h4{
     background-attachment: fixed;
     background-size: contain;
     padding: 5rem 0rem;
-
+    overflow: hidden;
     &__heading{
         text-align: center;
     }
@@ -438,6 +447,7 @@ h4{
 .quotes{
     text-align: center;
     padding: 5rem 20rem;
+    overflow: hidden;
     &__heading{
         margin-bottom: 4rem;
     }

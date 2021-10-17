@@ -57,6 +57,10 @@ h5 {
   background-color: indigo;
 }
 
+.wow {
+  visibility: hidden;
+}
+
 .preloading {
   overflow: hidden;
 }
@@ -175,6 +179,7 @@ i {
 
 .header__intro {
   text-align: center;
+  overflow: hidden;
 }
 
 .header__intro--title {
@@ -205,6 +210,7 @@ i {
   padding: 10rem 5rem;
   background: url(../images/wave.svg);
   background-size: cover;
+  overflow: hidden;
 }
 
 .about > div {
@@ -247,6 +253,7 @@ i {
 .resume {
   padding: 5rem 4rem;
   position: relative;
+  overflow: hidden;
 }
 
 .resume__heading {
@@ -432,6 +439,7 @@ h4 {
   background-attachment: fixed;
   background-size: contain;
   padding: 5rem 0rem;
+  overflow: hidden;
 }
 
 .project__heading {
@@ -535,6 +543,7 @@ h4 {
 .quotes {
   text-align: center;
   padding: 5rem 20rem;
+  overflow: hidden;
 }
 
 .quotes__heading {
