@@ -258,6 +258,9 @@ i {
   padding: 5rem 4rem 10rem 4rem;
   position: relative;
   overflow: hidden;
+  background: url(../images/circle.svg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .resume__heading {
@@ -373,7 +376,7 @@ i {
 
 .resume__to--project {
   position: absolute;
-  bottom: 0;
+  bottom: 10%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -422,6 +425,8 @@ i {
   position: relative;
   overflow: hidden;
   height: 100vh;
+  background: url(../images/stars.svg);
+  background-size: cover;
 }
 
 .assets__list {
@@ -601,6 +606,8 @@ i {
   overflow: hidden;
   height: 100vh;
   position: relative;
+  background: url(../images/scene.svg);
+  background-size: cover;
 }
 
 .quotes__heading {

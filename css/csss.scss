@@ -230,6 +230,9 @@ i{
     padding: 5rem 4rem 10rem 4rem;
     position: relative;
     overflow: hidden;
+    background: url(../images/circle.svg);
+    background-size: cover;
+    background-attachment: fixed;
     &__heading{
         text-align: center;
         margin-bottom: 10rem;
@@ -289,6 +292,7 @@ i{
     }
     &__item{
         height:100vh;
+
     }
     &__education{
         text-align: center;
@@ -314,7 +318,7 @@ i{
     }
     &__to--project{
         position: absolute;
-        bottom: 0;
+        bottom: 10%;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -347,6 +351,8 @@ i{
     position: relative;
     overflow: hidden;
     height:100vh;
+    background: url(../images/stars.svg);
+    background-size: cover;
     &__list{
         display: flex;
         justify-content:center;
@@ -494,6 +500,8 @@ i{
     overflow: hidden;
     height: 100vh;
     position: relative;
+    background: url(../images/scene.svg);
+    background-size: cover;
     &__heading{
         margin-bottom: 4rem;
     }
