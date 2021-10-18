@@ -28,6 +28,11 @@ img{
      height:auto;
  
  }
+a{
+    color:white;
+    text-decoration: none;
+}
+
  h1{
     font-size:6rem;
 }
@@ -38,7 +43,10 @@ img{
      font-size:3rem
  }
  h4{
-     font-size:2.5rem
+     font-size:2.5rem;
+     color: aqua;
+
+
  }
  
 h5{
@@ -184,12 +192,12 @@ i{
     background: url(../images/wave.svg);
     background-size: cover;
     overflow: hidden;
-    &>div{
-        width: 45%;
-    }
+    height: 100vh;
+ 
     &__photo{
-        width: 100%;
+        width: 220rem;
         height:auto;
+        margin-right: 10rem;
         >img{
             border-radius:4rem;
             box-shadow: $shadow;
@@ -219,7 +227,7 @@ i{
 
 /* -----------------------resume-------------------------*/
 .resume{
-    padding: 5rem 4rem;
+    padding: 5rem 4rem 10rem 4rem;
     position: relative;
     overflow: hidden;
     &__heading{
@@ -279,6 +287,9 @@ i{
         }
         }
     }
+    &__item{
+        height:100vh;
+    }
     &__education{
         text-align: center;
         margin-bottom: 5rem;
@@ -286,40 +297,32 @@ i{
     }
     &__skill{
         text-align: center;
+        margin: 5rem 20rem;
         &--list{
+            font-size:2.5rem;
             display: flex;
-            justify-content:space-evenly;
-    
+            justify-content:center;
+            flex-wrap: wrap;
+            >li:not(:last-child){
+                margin-right: 2rem;
+            }
+            >li{
+                padding: 2rem;
+            }
         }
 
     }
     &__to--project{
         position: absolute;
-        bottom: -1%;
+        bottom: 0;
         left: 50%;
         transform: translateX(-50%);
     }
 }
 
 
-.resume-second-block{
-    display: flex;
-    justify-content: space-evenly;
-}
-.resume-second-block>div{
-    width:30%;
-    height: 20rem;
-    padding:3rem;
-    margin:3rem;
-    /* background-color: rgb(26, 30, 37); */
-    border-radius:4rem;
-	background: linear-gradient(-45deg, #8a381f, #752b47, #085875, #0c8f70);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-    
 
 
-}
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -333,25 +336,61 @@ i{
 }
 
 
-h4{
-    color: aqua;
-}
 
 .assets{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    padding: 5rem 10rem;
+    position: relative;
+    overflow: hidden;
+    height:100vh;
     &__list{
         display: flex;
         justify-content:center;
         flex-wrap: wrap;
         align-items:center;
+        >div:not(:last-child){
+            margin-right: 5rem;
+        }
+        :first-child{
+            background-position: 0% 50%;
+        }
+        :nth-child(2){
+		    background-position: 100% 50%;
+
+        }
+        :nth-child(3){
+		background-position: 0% 50%;
+        }
     
-        >:not(:last-child){
-            margin-right: .5rem;
+    }
+    &__item{
+        border-radius: 4rem;
+        background: linear-gradient(-45deg, #8a381f, #752b47, #085875, #0c8f70);
+        background-size: 400% 400%;
+        margin-bottom: 5rem;
+        padding: 5rem 10rem;
+        min-width: 50rem;
+        &--heading{
+            margin-bottom: 4rem;
         }
-        >li{
-            padding:.5rem;
-            border: 1px solid $bg-color;
-            border-radius:3rem;
+        &--list{
+            >li:not(:last-child){
+                margin-bottom: 2rem;
+            }
         }
+        &--text{
+            line-height:150%;
+        }
+    }
+    &__arrow{
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -374,6 +413,9 @@ h4{
         padding: 3rem;
     }
     &__website{
+        position: relative;
+    }
+    &__app{
         position: relative;
     }
    &__section--wrapper{
@@ -435,11 +477,13 @@ h4{
             left: 50%;
             transform: translateX(-50%);
         }
+        &--quotes{
+            position: absolute;
+            bottom: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
-}
-.animation__backInRight{
-    animation: backInRight;
-    animation-duration: 2s;
 }
 
 
@@ -448,8 +492,16 @@ h4{
     text-align: center;
     padding: 5rem 20rem;
     overflow: hidden;
+    height: 100vh;
+    position: relative;
     &__heading{
         margin-bottom: 4rem;
+    }
+    &__arrow{
+        position: absolute;
+        bottom: 2%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -511,53 +563,110 @@ h4{
         }
 
     }
+
 }
 
 
 
 /* -----------------------Contact-----------------------*/
 .contact{
-    padding-top: 2rem;
+    padding: 5rem 10rem;
     background: url(../images/footer-bg.jpg) ;
     background-color: rgba(92, 73, 73, 0.7);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-size: cover;
-    &__download{
-        width:100%;
-        text-align:center;
-        padding-bottom: 3rem;
-        &--link{
-            color:rgb(178, 18, 218);
-            text-decoration: underline;
+    text-align: center;
+    overflow: hidden;
+    &__heading{
+        margin-bottom: 4rem;
+    }  
+    &__icon{
+        font-size:5rem;
+        margin-bottom: 3rem;
+    }
+    &__info{
+        &--item{
+            margin-bottom: 4rem;
+        }
+        &--item.flex{
+            display: flex;
+            margin-top: 8rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+   
+        &--heading{
+            margin-bottom: 4rem;
+        }
+        &--map{
+            width: 70%;
+
+        }
+    } 
+    &__link{
+        font-size:5rem;
+        margin-bottom: 5rem;
+        >:not(:last-child){
+            margin-right: 5rem;
         }
     }
-}
-.contact-info{
-    display: flex;
-    justify-content:space-evenly
-}
+    &__download{
+        &--button{
+            width:20rem;
+            font-size:2rem;
+            padding: 2rem 3rem;
+            background-image: linear-gradient(
+                to right,
+                #29323c,
+                #485563,
+                #2b5876,
+                #4e4376
+              );
+              box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+              color: rgb(232, 230, 227);
+              cursor: pointer;
+              border: none;
+              border-radius: 2rem;
+              background-size: 300% 100%;
+              position: relative;
+            &::before, &::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background-color: #75656a;
+                transform: scaleX(0);
+                transition: transform 0.5s ease;
+            }
+            &::before{
+                top: 0;
+                transform-origin: center right;
+            }
+            &:hover::before{
+                transform-origin: center left;
+                transform: scaleX(1);
+            }
+            &::after{
+                bottom: 0;
+                transform-origin: center left;
+            }
+            &:hover::after{
+                transform-origin: center right;
+                transform: scaleX(1);
+            }
 
-.contact-info>div>h4{
-    margin-bottom: 1.5rem;
-}
-.contact-info>div>div{
-    margin-left: 2rem;
-}
-.contact-link{
-    display: flex;
-    justify-content:center;
+        }
+  
+
    
 
-}
-.contact-link>a{
-    margin:3rem;
 
+    }
 }
-a{
-    text-decoration:none;
-    color: white;
-}
+
+
 
 /* -----------------------gotop-----------------------*/
 
