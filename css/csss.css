@@ -568,7 +568,7 @@ h4 {
   position: absolute;
   font-size: 4rem;
   top: 47%;
-  color: black;
+  color: grey;
   z-index: 10;
 }
 
@@ -589,15 +589,22 @@ h4 {
   right: 1rem;
 }
 
-.slider__main {
+.slider__wrapper {
   position: relative;
-  width: 100%;
+  overflow: hidden;
   border-radius: 3rem;
   height: 60rem;
-  overflow: hidden;
+}
+
+.slider__main {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
 }
 
 .slider__item {
@@ -613,9 +620,14 @@ h4 {
   background-color: rgba(31, 13, 13, 0.39);
   position: absolute;
   padding: 2rem;
-  left: 0rem;
-  bottom: 0rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 10;
+}
+
+.slider__item--img {
+  height: 60rem;
 }
 
 .slider__item--quotes {
