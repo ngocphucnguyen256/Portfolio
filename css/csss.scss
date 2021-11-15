@@ -60,6 +60,10 @@ h5{
     visibility: hidden;
 }
 
+.screen-h{
+    height: 100vh;
+}
+
 .preloading{
     overflow:hidden;
 }
@@ -153,7 +157,7 @@ i{
 
 /*----------------------------header------------------------------------*/
 .header{
-    height: 100vh;
+  
     // background-color: $bg-color;
     padding-top: 20vh;
     position: relative;
@@ -192,7 +196,6 @@ i{
     background: url(../images/wave.svg);
     background-size: cover;
     overflow: hidden;
-    height: 100vh;
  
     &__photo{
         width: 220rem;
@@ -290,10 +293,7 @@ i{
         }
         }
     }
-    &__item{
-        height:100vh;
 
-    }
     &__education{
         text-align: center;
         margin-bottom: 5rem;
@@ -350,7 +350,7 @@ i{
     padding: 5rem 10rem;
     position: relative;
     overflow: hidden;
-    height:100vh;
+
     background: url(../images/stars.svg);
     background-size: cover;
     &__list{
@@ -498,7 +498,7 @@ i{
     text-align: center;
     padding: 5rem 20rem;
     overflow: hidden;
-    height: 100vh;
+
     position: relative;
     background: url(../images/scene.svg);
     background-size: cover;
@@ -609,7 +609,10 @@ i{
         }
         &--map{
             width: 70%;
-
+            >iframe{
+                width: 60rem;
+                height: 45rem;
+            }
         }
     } 
     &__link{
@@ -704,18 +707,32 @@ i{
     html{
         font-size: 45%;
     }
+  
 }
  
+/* -----------------------ipad-----------------------*/
 @media only screen and (max-width:52em){
     html{
         font-size: 40%;
     }
+    .screen-h{
+        height: auto;
+    }
+    .header{
+        padding: 20rem;
+    }
+    .arrow__down{
+        display: none;
+    }  
 }   
+
+
+
 
 @media only screen and (max-width:42em){
     html{
         font-size: 25%;
-    }     
+    }
 }
 
 
