@@ -6,6 +6,7 @@ $color-primary: white;
 
 *{
     box-sizing: border-box;
+    // cursor:none;
 }
 html, body{
     margin: 0;
@@ -20,12 +21,13 @@ html{
 }
 body{
     font-size: 2rem;
+    line-height: 1.5;
     background-color: $bg-color;
 
 }
 img{
     width: 100%;
-     height:auto;
+    height:auto;
  
  }
 a{
@@ -88,6 +90,81 @@ h5{
     margin-top: -10rem;
     margin-left:-10rem;
 }
+
+.cursor {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 999;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim 1s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    content: "";
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    border: .8rem solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -1.6rem;
+    left: -1.6rem;
+    animation: cursorAnim2 1s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.9);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: .8rem solid rgb(42, 53, 59);
+
+}
+
+p {
+  color: white;
+  font-family: 'arial';
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.4em;
+  
+  a {
+    color: teal;
+  }
+}
+
    /* -----------------------nav menu------------------------------*/
 .nav-menu{
     display: flex;
@@ -388,9 +465,7 @@ i{
                 margin-bottom: 2rem;
             }
         }
-        &--text{
-            line-height:150%;
-        }
+    
     }
     &__arrow{
         position: absolute;
@@ -451,7 +526,8 @@ i{
             bottom:0;
             left: 0;
             width:100%;
-            transition: all .3s ease;
+            transition: height .9s;
+            transition-timing-function: cubic-bezier(.6, .3);
             opacity: 0;
             height: 0;
             
@@ -470,11 +546,14 @@ i{
         
     }
     &__item:hover > &__item--overlay{
-        opacity: .95;
-        height:35%;
-        background: linear-gradient(-45deg, #151515, #3C415C, #7e5959, #301B3F);
+        opacity: .98;
+        height:100%;
+        background: linear-gradient(-45deg, #151515, #1a1a1f, #1f1a1a, #211529);
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
+    }
+    &__item:hover > &__item--code{
+        z-index: 99;
     }
     &__to{
         &--app{
