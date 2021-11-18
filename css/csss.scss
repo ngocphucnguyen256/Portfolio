@@ -21,7 +21,6 @@ html{
 }
 body{
     font-size: 2rem;
-    line-height: 1.5;
     background-color: $bg-color;
     overflow-x: hidden;
 }
@@ -287,6 +286,7 @@ i{
     }
     &__desc{
         text-align: justify;
+        line-height: 2;
     }
     &__arrow{
         position: absolute;
@@ -459,6 +459,9 @@ i{
                 margin-bottom: 2rem;
             }
         }
+        &--text{
+            line-height:1.5;
+        }
     
     }
     &__arrow{
@@ -540,15 +543,14 @@ i{
         
     }
     &__item:hover > &__item--overlay{
+        line-height: 1.5;
         opacity: .98;
         height:100%;
         background: linear-gradient(-45deg, #151515, #1a1a1f, #1f1a1a, #211529);
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
     }
-    &__item:hover > &__item--code{
-        z-index: 99;
-    }
+ 
     &__to{
         &--app{
             position: absolute;
@@ -764,8 +766,8 @@ i{
    
 }
 .top:hover{
-    background-color: rgb(26, 30, 37);
-
+ transition: all 1s ease-in-out;
+ transform: scale(1.1);
 }
 
 

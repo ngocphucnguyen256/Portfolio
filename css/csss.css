@@ -17,7 +17,6 @@ html {
 
 body {
   font-size: 2rem;
-  line-height: 1.5;
   background-color: #202325;
   overflow-x: hidden;
 }
@@ -360,6 +359,7 @@ i {
 
 .about__desc {
   text-align: justify;
+  line-height: 2;
 }
 
 .about__arrow {
@@ -588,6 +588,10 @@ i {
   margin-bottom: 2rem;
 }
 
+.assets__item--text {
+  line-height: 1.5;
+}
+
 .assets__arrow {
   position: absolute;
   bottom: 5%;
@@ -685,16 +689,13 @@ i {
 }
 
 .project__item:hover > .project__item--overlay {
+  line-height: 1.5;
   opacity: .98;
   height: 100%;
   background: linear-gradient(-45deg, #151515, #1a1a1f, #1f1a1a, #211529);
   background-size: 400% 400%;
   -webkit-animation: gradient 15s ease infinite;
           animation: gradient 15s ease infinite;
-}
-
-.project__item:hover > .project__item--code {
-  z-index: 99;
 }
 
 .project__to--app {
@@ -945,7 +946,10 @@ i {
 }
 
 .top:hover {
-  background-color: #1a1e25;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media only screen and (max-width: 70em) {
