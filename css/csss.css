@@ -19,6 +19,7 @@ body {
   font-size: 2rem;
   line-height: 1.5;
   background-color: #202325;
+  overflow-x: hidden;
 }
 
 img {
@@ -111,6 +112,7 @@ h5 {
   -webkit-animation: cursorAnim 1s infinite alternate;
           animation: cursorAnim 1s infinite alternate;
   pointer-events: none;
+  mix-blend-mode: color-dodge;
 }
 
 .cursor::after {
@@ -118,13 +120,14 @@ h5 {
   width: 4rem;
   height: 4rem;
   position: absolute;
-  border: .8rem solid gray;
+  border: .8rem solid white;
   border-radius: 50%;
-  opacity: .5;
+  opacity: .8;
   top: -1.6rem;
   left: -1.6rem;
   -webkit-animation: cursorAnim2 1s infinite alternate;
           animation: cursorAnim2 1s infinite alternate;
+  mix-blend-mode: color-dodge;
 }
 
 @-webkit-keyframes cursorAnim {
@@ -177,8 +180,8 @@ h5 {
             transform: scale(1);
   }
   50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(2);
+            transform: scale(2);
   }
   100% {
     -webkit-transform: scale(1);
@@ -193,8 +196,8 @@ h5 {
             transform: scale(1);
   }
   50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(2);
+            transform: scale(2);
   }
   100% {
     -webkit-transform: scale(1);
@@ -206,19 +209,7 @@ h5 {
 .expand {
   -webkit-animation: cursorAnim3 .5s forwards;
           animation: cursorAnim3 .5s forwards;
-  border: 0.8rem solid #2a353b;
-}
-
-p {
-  color: white;
-  font-family: 'arial';
-  text-align: center;
-  margin-top: 50px;
-  font-size: 1.4em;
-}
-
-p a {
-  color: teal;
+  border: 0.8rem solid #659bb8;
 }
 
 /* -----------------------nav menu------------------------------*/
@@ -331,6 +322,7 @@ i {
           transform: translateX(-50%);
 }
 
+/* -----------------------main----------------------------------------*/
 /*----------------------------about------------------------------------*/
 .about {
   display: -webkit-box;
@@ -367,8 +359,7 @@ i {
 }
 
 .about__desc {
-  line-height: 4rem;
-  margin-right: 5rem;
+  text-align: justify;
 }
 
 .about__arrow {

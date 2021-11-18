@@ -7,7 +7,7 @@ $(window).on("load", function(){
       const cursor = document.querySelector('.cursor');
 
       document.addEventListener('mousemove', e => {
-          cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+          cursor.setAttribute("style", "top: "+(e.pageY - .01)+"px; left: "+(e.pageX - .01)+"px;")
       })
 
       document.addEventListener('click', () => {

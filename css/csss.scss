@@ -23,7 +23,7 @@ body{
     font-size: 2rem;
     line-height: 1.5;
     background-color: $bg-color;
-
+    overflow-x: hidden;
 }
 img{
     width: 100%;
@@ -101,6 +101,9 @@ h5{
     transition-timing-function: ease-out;
     animation: cursorAnim 1s infinite alternate;
     pointer-events: none;
+    mix-blend-mode: color-dodge;
+
+ 
 }
 
 .cursor::after {
@@ -108,12 +111,13 @@ h5{
     width: 4rem;
     height: 4rem;
     position: absolute;
-    border: .8rem solid gray;
+    border: .8rem solid white;
     border-radius: 50%;
-    opacity: .5;
+    opacity: .8;
     top: -1.6rem;
     left: -1.6rem;
     animation: cursorAnim2 1s infinite alternate;
+    mix-blend-mode: color-dodge;
 }
 
 @keyframes cursorAnim {
@@ -139,7 +143,7 @@ h5{
         transform: scale(1);
     }
     50% {
-        transform: scale(1.5);
+        transform: scale(2);
     }
     100% {
         transform: scale(1);
@@ -149,21 +153,10 @@ h5{
 
 .expand {
     animation: cursorAnim3 .5s forwards;
-    border: .8rem solid rgb(42, 53, 59);
+    border: .8rem solid rgb(101, 155, 184);
 
 }
 
-p {
-  color: white;
-  font-family: 'arial';
-  text-align: center;
-  margin-top: 50px;
-  font-size: 1.4em;
-  
-  a {
-    color: teal;
-  }
-}
 
    /* -----------------------nav menu------------------------------*/
 .nav-menu{
@@ -234,8 +227,6 @@ i{
 
 /*----------------------------header------------------------------------*/
 .header{
-  
-    // background-color: $bg-color;
     padding-top: 20vh;
     position: relative;
     &__canvas{
@@ -264,6 +255,10 @@ i{
         }
     }
 }
+
+/* -----------------------main----------------------------------------*/
+
+
 /*----------------------------about------------------------------------*/
 .about{
     display: flex;
@@ -273,7 +268,7 @@ i{
     background: url(../images/wave.svg);
     background-size: cover;
     overflow: hidden;
- 
+
     &__photo{
         width: 220rem;
         height:auto;
@@ -291,8 +286,7 @@ i{
         margin-bottom: 4rem;
     }
     &__desc{
-        line-height: 4rem;
-        margin-right: 5rem;
+        text-align: justify;
     }
     &__arrow{
         position: absolute;
@@ -812,6 +806,7 @@ i{
     html{
         font-size: 25%;
     }
+ 
 }
 
 
