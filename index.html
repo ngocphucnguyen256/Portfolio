@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/csss.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -479,43 +480,35 @@
     <!-------------------------------------Quotes-------------------------------------------------->
     <div class="quotes screen-h" id="quotes">
         <h2 class="quotes__heading wow fadeInDown">My favorite quotes</h2>
-        <div class="slider wow fadeInUp">
-            <i class="fas fa-chevron-left slider__button slider__button--left"></i>
-            <i class="fas fa-chevron-right slider__button slider__button--right"></i>
-            <div class="slider__wrapper">
-                <div class="slider__main">
-                    <div class="slider__item">
-                        <img class="slider__item--img" src="images/ElonMusk.jpg" alt="Elon Musk" />
-                        <div class="slider__item--text">
-                            <p class="slider__item--quotes">If something is important enough, even if the odds are
-                                against you,
-                                you should still do it.</p>
-                            <p class="slider__item--author">Elon Musk</p>
-                        </div>
-                    </div>
-                    <div class="slider__item">
-                        <img class="slider__item--img" src="images/SteveJobs.jpg" alt="Steve Jobs" />
-                        <div class="slider__item--text">
-                            <p class="slider__item--quotes">If you keep your eye on the profit, you’re going to
-                                skimp on the product.
-                                But if you focus on making
-                                really great products, then the profits will follow.</p>
-                            <p class="slider__item--author">Steve Jobs</p>
-                        </div>
-                    </div>
-
-                    <div class="slider__item">
-                        <img class="slider__item--img" src="images/StephenHawking.png" alt="Stephen Hawking" />
-                        <div class="slider__item--text">
-                            <p class="slider__item--quotes">However difficult life may seem, there is always
-                                something you can do and succeed at.</p>
-                            <p class="slider__item--author">Stephen Hawking</p>
-                        </div>
-                    </div>
-
+        <div class="main-carousel wow fadeInUp">
+            <div class="slider__item carousel-cell">
+                <img class="slider__item--img" src="images/ElonMusk.jpg" alt="Elon Musk" />
+                <div class="slider__item--text">
+                    <p class="slider__item--quotes">If something is important enough, even if the odds are
+                        against you,
+                        you should still do it.</p>
+                    <p class="slider__item--author">Elon Musk</p>
                 </div>
             </div>
-        </div>
+            <div class="slider__item carousel-cell">
+                <img class="slider__item--img" src="images/SteveJobs.jpg" alt="Steve Jobs" />
+                <div class="slider__item--text">
+                    <p class="slider__item--quotes">If you keep your eye on the profit, you’re going to
+                        skimp on the product.
+                        But if you focus on making
+                        really great products, then the profits will follow.</p>
+                    <p class="slider__item--author">Steve Jobs</p>
+                </div>
+            </div>
+            <div class="slider__item carousel-cell">
+                <img class="slider__item--img" src="images/StephenHawking.png" alt="Stephen Hawking" />
+                <div class="slider__item--text">
+                    <p class="slider__item--quotes">However difficult life may seem, there is always
+                        something you can do and succeed at.</p>
+                    <p class="slider__item--author">Stephen Hawking</p>
+                </div>
+            </div>
+          </div>
         <a href="#contact" class="quotes__arrow arrow__down"><i class="fas fa-arrow-down"></i></a>
 
     </div>
@@ -575,14 +568,14 @@
     <!-------------------------------------Script-------------------------------------------------->
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"
+    integrity="sha512-jq8sZI0I9Og0nnZ+CfJRnUzNSDKxr/5Bvha5bn7AHzTnRyxUfpUArMzfH++mwE/hb2efOo1gCAgI+1RMzf8F7g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
         integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"
-        integrity="sha512-jq8sZI0I9Og0nnZ+CfJRnUzNSDKxr/5Bvha5bn7AHzTnRyxUfpUArMzfH++mwE/hb2efOo1gCAgI+1RMzf8F7g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <script src="js/js.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 
 </html>

@@ -572,63 +572,34 @@ i{
 .quotes{
     text-align: center;
     padding: 5rem 20rem;
-    overflow: hidden;
-
-    position: relative;
     background: url(../images/scene.svg);
     background-size: cover;
     &__heading{
         margin-bottom: 4rem;
     }
     &__arrow{
-        position: absolute;
-        bottom: 2%;
-        left: 50%;
-        transform: translateX(-50%);
+        display:block;
+        margin-top: 4rem;
     }
 }
 
+.main-carousel{
+    height: 70vh;
+    border-radius: 3rem;
+
+}
+.carousel-cell{
+    height: 100%;
+}
+.flickity-viewport{
+    border-radius: 3rem;
+}
 .slider{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    position: relative;
-    &__button{
-        display: block;
-        position: absolute;
-        font-size: 4rem;
-        top: 47%;
-        color: grey;
-        z-index: 10;
-        &:hover{
-            transform: scale(1.2);
-            transition: transform 1.5s ease-in-out;
-        }
-        &--left{
-            left: 1rem;
-        }
-        &--right{
-            right: 1rem;
-        }
-    }
-    &__wrapper{
-        position: relative;
-        overflow: hidden;
-        border-radius: 3rem;
-        height:60rem;
-
-
-    }
-    &__main{
-        position: relative;
-        display:flex;
-        transition : transform 0.5s linear;
-    }
     &__item{
-        flex: 1 0 100%;
         width: 100%;
         height: 100%;
         position: relative;
+
         &--text{
             background-color: rgba(31, 13, 13, 0.39);
             position: absolute;
@@ -638,27 +609,21 @@ i{
             bottom: 0;
             z-index: 10;
         }
-        &--img{
-            height: 60rem;
-        }
         &--quotes{
             margin-bottom: 2rem;
         }
 
     }
-
 }
+
+
+
 
 
 
 /* -----------------------Contact-----------------------*/
 .contact{
     padding: 5rem 10rem;
-    background: url(../images/footer-bg.jpg) ;
-    background-color: rgba(92, 73, 73, 0.7);
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
-    background-size: cover;
     text-align: center;
     overflow: hidden;
     &__heading{
