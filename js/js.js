@@ -1,25 +1,10 @@
 $(window).on("load", function(){
 
     //particles
-    let isLg =screen.width>550 ? true : false
-      Particles.init({
-          selector: '.header__canvas',
-          color: '#085875',
-          connectParticles: isLg,
-      });
+    particles();
 
     //cursor
-      const cursor = document.querySelector('.cursor');
-      document.addEventListener('mousemove', e => {
-          cursor.setAttribute("style", "top: "+(e.pageY - .01)+"px; left: "+(e.pageX - .01)+"px;")
-      })
-      document.addEventListener('click', () => {
-          cursor.classList.add("expand");
-
-          setTimeout(() => {
-              cursor.classList.remove("expand");
-          }, 500)
-      })
+    customCursor();
 
     //wow
       var wow = new WOW(
@@ -38,6 +23,10 @@ $(window).on("load", function(){
 //       $('body').delay(1000).removeClass('preloading');
 //   });
 
+
+    //switch mode
+    switchMode();
+
     //slider
     $('.main-carousel').flickity({
       // options
@@ -47,6 +36,52 @@ $(window).on("load", function(){
     });
 
 })
+function particles(){
+  let isLg =screen.width>550 ? true : false
+  Particles.init({
+      selector: '.header__canvas',
+      color: '#085875',
+      connectParticles: isLg,
+  });
+}
 
+function customCursor(){
+  const cursor = document.querySelector('.cursor');
+  document.addEventListener('mousemove', e => {
+      cursor.setAttribute("style", "top: "+(e.pageY - .01)+"px; left: "+(e.pageX - .01)+"px;")
+  })
+  document.addEventListener('click', () => {
+      cursor.classList.add("expand");
 
+      setTimeout(() => {
+          cursor.classList.remove("expand");
+      }, 500)
+  })
+
+}
+
+function switchMode(){
+  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+  const currentTheme = localStorage.getItem('theme');
+
+  if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      if (currentTheme === 'dark') {
+          toggleSwitch.checked = true;
+      }
+  }
+
+  function switchTheme(e) {
+      if (e.target.checked) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+      } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+      }
+  }
+
+  toggleSwitch.addEventListener('change', switchTheme, false);
+}
 
