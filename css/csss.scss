@@ -1,8 +1,22 @@
 $bg-color: rgb(32, 35, 37);
+$bg-color-light: white;
 $font :'Poppins', sans-serif;
 $shadow: 8px 10px 22px -1px rgba(0,0,0,0.77);
 $color-primary: white;
+$color-light: black;
 
+:root {
+    --white: white;
+    --black: black;
+    --gray: rgb(32, 35, 37);
+
+  }
+  [data-theme="light"] {
+    --white: black;
+    --black: white;
+    --gray: #c0c5ce;
+
+  }
 
 *{
     box-sizing: border-box;
@@ -16,12 +30,12 @@ html{
     scroll-behavior: smooth;
     font-family: $font;
     font-size:62.5%;
-    color:white;
+    color:var(--white);
     
 }
 body{
     font-size: 2rem;
-    background-color: $bg-color;
+    background-color: var(--gray);
     overflow-x: hidden;
 }
 img{
@@ -30,7 +44,7 @@ img{
  
  }
 a{
-    color:white;
+    color:var(--white);
     text-decoration: none;
 }
 
@@ -72,7 +86,7 @@ h5{
 #load{
     width:100%;
     height:100%;
-    background-color: $bg-color;
+    background-color: var(--gray);
     position: fixed;
     top: 0;
     left: 0;
@@ -161,7 +175,7 @@ h5{
 .nav-menu{
     display: flex;
     padding:0;
-    background-color: $bg-color;
+    background-color: var(--gray);
 
     position: sticky;
     top: 0;
@@ -229,6 +243,7 @@ i{
     padding-top: 20vh;
     position: relative;
     &__canvas{
+        background-color: var(--gray);
         position: absolute;
         z-index: -1;
         width: 100%;
@@ -261,7 +276,7 @@ i{
 /*----------------------------about------------------------------------*/
 .about{
     display: flex;
-    color: white;
+    color:var(--white);
     justify-content: space-between;
     padding: 10rem 5rem;
     background: url(../images/wave.svg);
@@ -451,6 +466,7 @@ i{
         margin-bottom: 5rem;
         padding: 5rem 10rem;
         min-width: 50rem;
+        box-shadow: $shadow;
         &--heading{
             margin-bottom: 4rem;
         }
@@ -509,6 +525,7 @@ i{
         border-radius: 3rem;
         overflow: hidden;
         position: relative;
+        box-shadow: $shadow;
         &--title{
             margin: 2rem 0rem;
         }
@@ -593,6 +610,7 @@ i{
 }
 .flickity-viewport{
     border-radius: 3rem;
+    box-shadow: $shadow;
 }
 .slider{
     &__item{
@@ -731,10 +749,70 @@ i{
    
 }
 .top:hover{
- transition: all 1s ease-in-out;
- transform: scale(1.1);
+transition: all 1s ease-in-out;
+transform: scale(1.1);
 }
 
+/* -----------------------theme-----------------------*/
+
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+  }
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: $bg-color;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    &::before{
+        background-color:var(--white);
+        bottom: 4px;
+        content: "";
+        height: 26px;
+        left: 4px;
+        position: absolute;
+        transition: .4s;
+        width: 26px;
+     
+  }
+}
+ 
+  input:checked + .slider {
+    background-color: #eee;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+   
+  }
+  
+  .slider.round {
+    border-radius: 3.4rem;
+    &::before{
+     border-radius: 50%;
+    }
+  }
+  
 
 
 
