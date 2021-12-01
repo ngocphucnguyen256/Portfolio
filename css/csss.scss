@@ -601,7 +601,7 @@ i{
 }
 
 .main-carousel{
-    height: 70vh;
+    height: 55rem;
     border-radius: 3rem;
 
 }
@@ -611,6 +611,17 @@ i{
 .flickity-viewport{
     border-radius: 3rem;
     box-shadow: $shadow;
+}
+.flickity-prev-next-button{
+    width: 4.4rem;
+    height: 4.4rem;
+}
+.flickity-page-dots{
+    bottom: -3rem;
+}
+.flickity-page-dots .dot{
+    width: 1.5rem;
+    height: 1.5rem;
 }
 .slider{
     &__item{
@@ -778,7 +789,7 @@ transform: scale(1.1);
     display:none;
   }
   
-  .slider {
+  .theme-switch__slider {
     background-color: $bg-color;
     bottom: 0;
     cursor: pointer;
@@ -800,16 +811,16 @@ transform: scale(1.1);
   }
 }
  
-  input:checked + .slider {
+  input:checked + .theme-switch__slider {
     background-color: #eee;
   }
   
-  input:checked + .slider:before {
+  input:checked + .theme-switch__slider:before {
     transform: translateX(26px);
    
   }
   
-  .slider.round {
+  .theme-switch__slider.round {
     border-radius: 3.4rem;
     &::before{
      border-radius: 50%;
@@ -853,6 +864,12 @@ transform: scale(1.1);
 @media only screen and (max-width:42em){
     html{
         font-size: 25%;
+    }
+    body{
+        padding: 30rem 0;
+    }
+    .quotes{
+        padding-bottom: 10rem;
     }
  
 }
