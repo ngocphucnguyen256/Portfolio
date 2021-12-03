@@ -305,7 +305,7 @@ i {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 2px;
+  width: .2rem;
   background-color: white;
   -webkit-transform-origin: center;
           transform-origin: center;
@@ -318,11 +318,11 @@ i {
 }
 
 .arrow__down::before {
-  left: -8px;
+  left: -0.8rem;
 }
 
 .arrow__down::after {
-  right: -8px;
+  right: -0.8rem;
 }
 
 .arrow__down:hover::before, .arrow__down:hover::after {
@@ -573,7 +573,7 @@ i {
   position: absolute;
   left: 0;
   right: 0;
-  height: 2px;
+  height: .2rem;
   background-color: white;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
@@ -912,6 +912,8 @@ i {
 .quotes__arrow {
   display: block;
   margin-top: 4rem;
+  display: inline-block;
+  position: relative;
 }
 
 .main-carousel {
@@ -1041,7 +1043,7 @@ i {
   position: absolute;
   left: 0;
   right: 0;
-  height: 2px;
+  height: .2rem;
   background-color: #75656a;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
@@ -1087,11 +1089,34 @@ i {
   margin: auto;
 }
 
-.top:hover {
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.top::before, .top::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: .2rem;
+  background-color: white;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.top::before {
+  left: -0.8rem;
+}
+
+.top::after {
+  right: -0.8rem;
+}
+
+.top:hover::before, .top:hover::after {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
 }
 
 /* -----------------------theme-----------------------*/
@@ -1103,16 +1128,16 @@ i {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 1rem;
+  right: 1rem;
   z-index: 1000;
 }
 
 .theme-switch {
   display: inline-block;
-  height: 34px;
+  height: 3.4rem;
   position: relative;
-  width: 60px;
+  width: 6rem;
 }
 
 .theme-switch input {
@@ -1133,14 +1158,14 @@ i {
 
 .theme-switch__slider::before {
   background-color: var(--white);
-  bottom: 4px;
+  bottom: .4rem;
   content: "";
-  height: 26px;
-  left: 4px;
+  height: 2.6rem;
+  left: .4rem;
   position: absolute;
   -webkit-transition: .4s;
   transition: .4s;
-  width: 26px;
+  width: 2.6rem;
 }
 
 input:checked + .theme-switch__slider {
@@ -1148,8 +1173,8 @@ input:checked + .theme-switch__slider {
 }
 
 input:checked + .theme-switch__slider:before {
-  -webkit-transform: translateX(26px);
-          transform: translateX(26px);
+  -webkit-transform: translateX(2.6rem);
+          transform: translateX(2.6rem);
 }
 
 .theme-switch__slider.round {
