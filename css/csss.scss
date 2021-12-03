@@ -50,17 +50,23 @@ a{
 
  h1{
     font-size:6rem;
+    font-weight: bold;
+
 }
  h2{
      font-size:4rem;
+     font-weight: bold;
  }
  h3{
-     font-size:3rem
+     font-size:3rem;
+     font-weight: bold;
+
  }
  h4{
      font-size:2.5rem;
      color: aqua;
 
+     font-weight: bold;
 
  }
  
@@ -233,6 +239,32 @@ i{
 .arrow{
     &__down{
         font-size:4rem;
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: white;
+            transform-origin: center;
+            transform: scaleY(0);
+            transition: transform 0.5s ease;
+          }
+          
+          &::before {
+            left: -8px;
+          }
+          
+          &::after {
+            right: -8px;
+          }
+          
+          &:hover::before, &:hover::after {
+            transform: scaleY(1);
+          }
+        >i{
+            margin-right: 0rem;
+        }
     }
 }
 
@@ -378,6 +410,7 @@ i{
         }
         >div{
             margin-bottom: 3rem;
+           
         }
     }
     &__expert{
@@ -396,6 +429,33 @@ i{
                 align-items: center;
                 border-radius: 3rem;
                 box-shadow: $shadow;
+                position: relative;
+                &::before, &::after{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    height: 2px;
+                    background-color: white;
+                    transform: scaleX(0);
+                    transition: transform 0.5s ease;
+                }
+                &::before{
+                    top: 0;
+                    transform-origin: center right;
+                }
+                &:hover::before{
+                    transform-origin: center left;
+                    transform: scaleX(1);
+                }
+                &::after{
+                    bottom: 0;
+                    transform-origin: center left;
+                }
+                &:hover::after{
+                    transform-origin: center right;
+                    transform: scaleX(1);
+                }
                 >i{
                     font-size: 4rem;
                 }
@@ -404,7 +464,9 @@ i{
                 }
             }
         }
-  
+        &--arrow{
+            position: relative;
+        }
     }
     &__icon{
         &--big{
@@ -606,7 +668,7 @@ i{
     &__item:hover > &__item--overlay{
         line-height: 1.5;
         opacity: .98;
-        height:60%;
+        height:70%;
         background: linear-gradient(-45deg, #151515, #1a1a1f, #1f1a1a, #211529);
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;

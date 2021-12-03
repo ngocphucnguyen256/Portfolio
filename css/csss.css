@@ -45,19 +45,23 @@ a {
 
 h1 {
   font-size: 6rem;
+  font-weight: bold;
 }
 
 h2 {
   font-size: 4rem;
+  font-weight: bold;
 }
 
 h3 {
   font-size: 3rem;
+  font-weight: bold;
 }
 
 h4 {
   font-size: 2.5rem;
   color: aqua;
+  font-weight: bold;
 }
 
 h5 {
@@ -296,6 +300,40 @@ i {
   font-size: 4rem;
 }
 
+.arrow__down::before, .arrow__down::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: white;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.arrow__down::before {
+  left: -8px;
+}
+
+.arrow__down::after {
+  right: -8px;
+}
+
+.arrow__down:hover::before, .arrow__down:hover::after {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.arrow__down > i {
+  margin-right: 0rem;
+}
+
 /*----------------------------header------------------------------------*/
 .header {
   padding-top: 20vh;
@@ -527,6 +565,48 @@ i {
   border-radius: 3rem;
   -webkit-box-shadow: 8px 10px 22px -1px rgba(0, 0, 0, 0.77);
           box-shadow: 8px 10px 22px -1px rgba(0, 0, 0, 0.77);
+  position: relative;
+}
+
+.resume__expert--list > div::before, .resume__expert--list > div::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: white;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.resume__expert--list > div::before {
+  top: 0;
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+}
+
+.resume__expert--list > div:hover::before {
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.resume__expert--list > div::after {
+  bottom: 0;
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+
+.resume__expert--list > div:hover::after {
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .resume__expert--list > div > i {
@@ -535,6 +615,10 @@ i {
 
 .resume__expert--list > div > p {
   margin-top: 4rem;
+}
+
+.resume__expert--arrow {
+  position: relative;
 }
 
 .resume__icon--big {
@@ -790,7 +874,7 @@ i {
 .project__item:hover > .project__item--overlay {
   line-height: 1.5;
   opacity: .98;
-  height: 60%;
+  height: 70%;
   background: linear-gradient(-45deg, #151515, #1a1a1f, #1f1a1a, #211529);
   background-size: 400% 400%;
   -webkit-animation: gradient 15s ease infinite;
