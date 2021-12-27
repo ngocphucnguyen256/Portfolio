@@ -1,5 +1,9 @@
 $(window).on("load", function(){
 
+  $('#load').delay(1000).fadeOut('slow', function(){
+    $('body').delay(1000).removeClass('preloading');
+  });
+ 
     //particles
     particles();
 
@@ -19,9 +23,7 @@ $(window).on("load", function(){
         }
       );
       wow.init();
-//   $('#load').delay(1000).fadeOut('slow', function(){
-//       $('body').delay(1000).removeClass('preloading');
-//   });
+
 
 
     //switch mode
@@ -48,7 +50,7 @@ function particles(){
 function customCursor(){
   const cursor = document.querySelector('.cursor');
   document.addEventListener('mousemove', e => {
-      cursor.setAttribute("style", "top: "+(e.pageY - .01)+"px; left: "+(e.pageX - .01)+"px;")
+      cursor.setAttribute("style", "top: "+(e.pageY - 1)+"px; left: "+(e.pageX - 1)+"px;")
   })
   document.addEventListener('click', () => {
       cursor.classList.add("expand");
